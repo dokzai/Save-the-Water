@@ -57,7 +57,7 @@ function endGame() {
 function setUp() {
 
   // sets random amount of water from 2-3L
-  maxHealth = randomNumber(2000, 3000);
+  maxHealth = randomNumber(15000, 30000);
   curHealth = [maxHealth];
   // displays other info
   var t = "Today's temperature: " + randomNumber(20, 35) + " degrees";
@@ -117,7 +117,7 @@ function runGame() {
     grounded: true
   };
 
-  var NUM_OBSTACLES = randomNumber(15, 25); //Number of obstacles before reaching home
+  var NUM_OBSTACLES = randomNumber(20, 30); //Number of obstacles before reaching home
 
   // sets game background
   canvas.style['background-image'] = 'url(Images/background.png)';
@@ -316,7 +316,7 @@ $(".health-bar").css({
 function applyChange(curHealth) {
   var audio = new Audio("Sound/ow.mp3");
   audio.play();
-  var damage = randomNumber(400, 800);
+  var damage = randomNumber(4000, 8000);
   curHealth[0] = curHealth[0] - damage;
   if (curHealth[0] <= 0) {
     curHealth[0] = 0;
