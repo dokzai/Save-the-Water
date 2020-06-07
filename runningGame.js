@@ -246,10 +246,10 @@ function update() {
     if (boxes[i].name == "floor") {
       ctx.fillStyle = "white";
       ctx.fillRect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
-    } else if (boxes[i].name == "nextLevel") {
+    } else if (boxes[i].name == "house") {
       boxes[i].x -= 15;
-      var starimg = document.getElementById('house');
-      ctx.drawImage(starimg, boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
+      var houseimg = document.getElementById('house');
+      ctx.drawImage(houseimg, boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
     } else {
       boxes[i].x -= 15; //This moves all the obstacles to the left
 
